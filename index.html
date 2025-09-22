@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Dashboard - CSS & JavaScript Assignment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===========================================
+       HTML STRUCTURE
+       =========================================== -->
+  
+  <div class="container">
+    <div class="header">
+      <h1>Interactive Dashboard</h1>
+      <p>CSS3 Animations + JavaScript Functions Assignment</p>
+    </div>
+    
+    <div class="dashboard">
+      <!-- Card 1: Progress Animation -->
+      <div class="card">
+        <h3>📊 Progress Tracker</h3>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 10px;">Project Completion</p>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p style="color: white; font-weight: 600;"><span id="progressText">0%</span> Complete</p>
+        <button class="btn" onclick="animateProgress()" style="margin-top: 15px;">Update Progress</button>
+      </div>
+      
+      <!-- Card 2: Loading Animation -->
+      <div class="card">
+        <h3>⏳ Loading States</h3>
+        <div class="status">
+          <span class="pulse-dot"></span>
+          <span id="loadingStatus">Ready</span>
+        </div>
+        <div class="spinner" id="spinner"></div>
+        <button class="btn" onclick="toggleLoading()" style="margin-top: 15px;">Toggle Loading</button>
+      </div>
+      
+      <!-- Card 3: Card Flip -->
+      <div class="card">
+        <h3>🔄 Interactive Card</h3>
+        <div class="flip-card" id="flipCard">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Front Side</h3>
+              <p>Click to flip!</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Back Side</h3>
+              <p>Magic happens! ✨</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn" onclick="flipCard()" style="margin-top: 15px;">Flip Card</button>
+      </div>
+      
+      <!-- Card 4: Counter with Animations -->
+      <div class="card">
+        <h3>🎯 Animated Counter</h3>
+        <div style="text-align: center; margin: 20px 0;">
+          <div id="counter" style="font-size: 3rem; color: white; font-weight: bold;">0</div>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <button class="btn" onclick="incrementCounter()">+</button>
+          <button class="btn" onclick="decrementCounter()">-</button>
+          <button class="btn" onclick="resetCounter()">Reset</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <button class="btn" onclick="showModal()">Open Modal</button>
+      <button class="btn" onclick="animateAllCards()">Animate All Cards</button>
+      <button class="btn" onclick="generateRandomColor()">Random Theme</button>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="hideModal()">&times;</button>
+      <h2 style="color: #333; margin-bottom: 15px;">🎉 Success!</h2>
+      <p style="color: #666; line-height: 1.6;">This modal demonstrates smooth CSS transitions combined with JavaScript event handling. The entrance and exit animations are powered by CSS transforms and opacity changes.</p>
+      <button class="btn" onclick="hideModal()" style="margin-top: 20px;">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
